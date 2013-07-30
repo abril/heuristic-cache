@@ -2,10 +2,10 @@
 
 module AlxHeuristicCache
 
-  CACHEABLE_STATUSES = [ ::Status::DISPONIVEL ]
+  CACHEABLE_STATUSES = [ "disponivel" ] unless defined? ::CACHEABLE_STATUSES 
 
   def self.cacheable?(object)
-    object.respond_to?(:status) && CACHEABLE_STATUSES.include?(object.status)
+    object.respond_to?(:status) && ::CACHEABLE_STATUSES.include?(object.status)
   end
   
   class TTL

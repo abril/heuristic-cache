@@ -9,7 +9,7 @@ module AlxHeuristicCache
         if File.exists?(txt)
           @@version = File.read(txt).chomp.gsub("v","")
         else
-          @@version = "0.0.0"
+          @@version = "0.0.1"
         end
       end
       @@version
