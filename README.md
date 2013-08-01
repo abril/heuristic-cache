@@ -1,4 +1,6 @@
-# HeuristicCache
+# Heuristic Cache
+
+[![Build Status](https://travis-ci.org/abril/heuristic-cache.png?branch=master)](https://travis-ci.org/abril/heuristic-cache)
 
 TODO: Write a gem description
 
