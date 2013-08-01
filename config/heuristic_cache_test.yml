@@ -1,0 +1,30 @@
+commom: &commom
+  cache_config:
+    coefficient:
+      materia:
+        show: 0.02
+      lista_editorial: 
+        show: 0.02
+      galeria_multimidia: 
+        show: 0.02
+    time_to_live:
+      maximum: 3600
+      minimum: 60
+      default: 60
+    cacheable_statuses:
+      - disponivel
+
+development:
+  <<: *commom
+dev:
+  <<: *commom
+test: 
+  <<: *commom
+qa:
+  <<: *commom
+qalegado:
+  <<: *commom
+stage:
+  <<: *commom
+production:
+  <<: *commom
