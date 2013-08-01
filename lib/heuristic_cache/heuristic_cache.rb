@@ -7,6 +7,10 @@ module HeuristicCache
 
     raise ArgumentError, 'Param env is required' if env == nil
 
+    raise ArgumentError, 'Param file (path config file) is required' if file == nil
+
+    raise ArgumentError, 'Param file (path config file) is invalid' unless File.exists?(file)
+
     config = ::Commons::Yml.read(file)[env.to_s]['cache_config']
 
     STDOUT.puts 'WARNING: attr time_to_live is required' if config["time_to_live"] == nil
