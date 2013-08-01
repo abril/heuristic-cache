@@ -5,14 +5,14 @@ module HeuristicCache
 
   def self.init(file, env = 'development')
 
-    raise ArgumentError, 'Param env é required' if env == nil
+    raise ArgumentError, 'Param env is required' if env == nil
 
     config = ::Commons::Yml.read(file)[env.to_s]['cache_config']
 
-    STDOUT.puts 'WARNING: attr time_to_live no file de config não definido' if config["time_to_live"] == nil
+    STDOUT.puts 'WARNING: attr time_to_live is required' if config["time_to_live"] == nil
     TTL.init(config["time_to_live"])
 
-    STDOUT.puts 'WARNING: attr coefficient no file de config é required' if config["coefficient"] == nil
+    STDOUT.puts 'WARNING: attr coefficient is required' if config["coefficient"] == nil
     Coefficient.init(config["coefficient"])
 
     CACHEABLE_STATUSES.concat(config["cacheable_statuses"])
