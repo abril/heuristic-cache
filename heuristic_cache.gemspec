@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'alx_heuristic_cache/version'
+require 'heuristic_cache/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "alx_heuristic_cache"
+  spec.name          = "heuristic_cache"
   spec.version       = AlxHeuristicCache::VERSION.to_s
   spec.authors       = ["AbrMidia"]
   spec.email         = ["AgileTeamMusashi@abril.com.br"]

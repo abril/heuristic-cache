@@ -1,4 +1,4 @@
-# AlxHeuristicCache
+# HeuristicCache
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'alx_heuristic_cache'
+    gem 'heuristic_cache'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install alx_heuristic_cache
+    $ gem install heuristic_cache
 
 ## Usage
 
