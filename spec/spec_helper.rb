@@ -28,4 +28,5 @@ end
 # in spec/support/ and its subdirectories.
 Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f }
 
-::HeuristicCache.init(File.join(File.dirname(__FILE__), "..", "config", "heuristic_cache_test"), 'test')
+::HeuristicCache.init(File.join(File.dirname(__FILE__), "..", "config", "heuristic_cache_test.yml"), 'test')
+
