@@ -5,18 +5,22 @@ module HeuristicCache
 
   def self.init(file, env = 'development')
 
-    raise ArgumentError, 'Param env is required' if env == nil
+    raise ArgumentError, '[HEURISTIC_CACHE] Param env is required' if env == nil
 
-    raise ArgumentError, 'Param file (path config file) is required' if file == nil
+    raise ArgumentError, '[HEURISTIC_CACHE] Param file (path config file) is required' if file == nil
 
-    raise ArgumentError, 'Param file (path config file) is invalid' unless File.exists?(file)
+    raise ArgumentError, '[HEURISTIC_CACHE] Param file (path config file) is invalid' unless File.exists?(file)
 
-    config = ::Commons::Yml.read(file)[env.to_s]['cache_config']
+    yml = ::Commons::Yml.read(file)
 
-    STDOUT.puts 'WARNING: attr time_to_live is required' if config["time_to_live"] == nil
+    raise ArgumentError, "[HEURISTIC_CACHE] Config for ENV (#{env}) not found" unless yml[env]
+
+    config = yml[env]['cache_config']
+
+    STDOUT.puts '[HEURISTIC_CACHE] WARNING: attr time_to_live is required' if config["time_to_live"] == nil
     TTL.init(config["time_to_live"])
 
-    STDOUT.puts 'WARNING: attr coefficient is required' if config["coefficient"] == nil
+    STDOUT.puts '[HEURISTIC_CACHE] WARNING: attr coefficient is required' if config["coefficient"] == nil
     Coefficient.init(config["coefficient"])
 
     CACHEABLE_STATUSES.concat(config["cacheable_statuses"])
