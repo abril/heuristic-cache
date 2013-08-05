@@ -1,8 +1,10 @@
 # Heuristic Cache
 
 [![Build Status](https://travis-ci.org/abril/heuristic-cache.png?branch=master)](https://travis-ci.org/abril/heuristic-cache)
+[![Code Climate](https://codeclimate.com/github/abril/heuristic-cache.png)](https://codeclimate.com/github/abril/heuristic-cache)
+[![Gem Version](https://badge.fury.io/rb/heuristic_cache.png)](http://badge.fury.io/rb/heuristic_cache)
 
-TODO: Write a gem description
+Heuristic TTL for HTTP-Cache Headers
 
 ## Installation
 
