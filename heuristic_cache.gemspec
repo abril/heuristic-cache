@@ -5,7 +5,7 @@ require 'heuristic_cache/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'heuristic_cache'
-  spec.version       = AlxHeuristicCache::VERSION.to_s
+  spec.version       = HeuristicCache::VERSION.to_s
   spec.authors       = ['Wilson Souza', 'Luiz Rocha']
   spec.email         = ['willroberto@gmail.com', 'lsdrocha@gmail.com']
   spec.summary       = 'Heuristic TTL for HTTP-Cache Headers'
@@ -21,4 +21,3 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'step-up', '0.8.2'
 end
-

@@ -1,6 +1,4 @@
 # encoding: UTF-8
-module AlxHeuristicCache
-
+module HeuristicCache
   VERSION = '0.0.2'
-
 end
