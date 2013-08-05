@@ -1,7 +1,7 @@
 # encoding: utf-8
 require File.expand_path("heuristic_cache", File.dirname(__FILE__)) unless defined?(::HeuristicCache)
 
-module AlxHeuristicCache
+module HeuristicCache
 
   module Helpers
 
