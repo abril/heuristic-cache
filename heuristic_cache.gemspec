@@ -8,8 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = AlxHeuristicCache::VERSION.to_s
   spec.authors       = ['Wilson Souza', 'Luiz Rocha']
   spec.email         = ['willroberto@gmail.com', 'lsdrocha@gmail.com']
-  spec.description   = %q{Gem controladora de TTL para recursos}
-  spec.summary       = %q{AlxHeuristicCache}
+  spec.summary       = 'Heuristic TTL for HTTP-Cache Headers'
   spec.homepage      = 'https://github.com/abril/heuristic-cache'
   spec.license       = 'MIT'
 
